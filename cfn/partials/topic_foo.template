@@ -1,0 +1,17 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Includes Example.",
+  "Resources": {
+    "SNSFooTopic": {
+      "Type": "AWS::SNS::Topic",
+      "Properties": {
+        "Subscription": [
+          {
+            "Endpoint": "dummy-test-email@gmail.com",
+            "Protocol": "email"
+          }
+        ]
+      }
+    }
+  }
+}

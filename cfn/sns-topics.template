@@ -1,0 +1,18 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Includes Example.",
+  "Resources": {
+    "SNSStackFoo" : {
+      "Type" : "AWS::CloudFormation::Stack",
+      "Properties" : {
+        "TemplateURL" : "https://s3-eu-west-1.amazonaws.com/<<<INSERT_BUCKET_NAME>>>/topic_bar.template"
+      }
+    },
+    "SNSStackBar" : {
+      "Type" : "AWS::CloudFormation::Stack",
+      "Properties" : {
+        "TemplateURL" : "https://s3-eu-west-1.amazonaws.com/<<<INSERT_BUCKET_NAME>>/topic_foo.template"
+      }
+    }
+  }
+}
